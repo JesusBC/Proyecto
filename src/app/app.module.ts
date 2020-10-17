@@ -13,6 +13,7 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 registerLocaleData(localePy, 'es');
 registerLocaleData(en);
 

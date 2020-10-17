@@ -12,6 +12,7 @@ import { LoadingComponent } from './loading/loading.component';
 import {FooterComponent} from "./footer/footer.component";
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 
+
 registerLocaleData(en);
 
 @NgModule({
@@ -22,7 +23,8 @@ registerLocaleData(en);
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     CommonModule,

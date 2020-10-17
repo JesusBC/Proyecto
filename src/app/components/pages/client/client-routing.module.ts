@@ -12,7 +12,19 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
-      }
+      },
+      {
+        path: 'dispositivos',
+        loadChildren: () => import('./dispositivos/dispositivos.module').then(m => m.DispositivosPageModule),
+      },
+      {
+        path: 'armas',
+        loadChildren: () => import('./armas/armas.module').then(m => m.ArmasPageModule),
+      },
+      {
+        path: 'contacto',
+        loadChildren: () => import('./contacto/contacto.module').then(m => m.ContactoPageModule),
+      },
     ],
   }
 ];
