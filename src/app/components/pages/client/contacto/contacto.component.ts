@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, FormGroup, ValidationErrors, Validators} from 
 import {Observable, Observer} from 'rxjs';
 import {Person} from '../../../../models/person';
 
+
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -14,6 +15,7 @@ export class ContactoComponent implements OnInit {
 
 
   ngOnInit() {
+
   }
 
   validateForm: FormGroup;
