@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DispositivosComponent } from './dispositivos.component';
 import { DispositivosPageRoutingModule} from './dispositivos-routing.module';
 import {LayoutModule} from '../../../shared/layout/layout.module';
+import {NgZorroAntdModule, NzGridModule} from "ng-zorro-antd";
 
 
 
@@ -17,6 +18,8 @@ import {LayoutModule} from '../../../shared/layout/layout.module';
     FormsModule,
     DispositivosPageRoutingModule,
     LayoutModule,
+    NzGridModule,
+    NgZorroAntdModule,
   ],
   declarations: [DispositivosComponent],
   exports: []

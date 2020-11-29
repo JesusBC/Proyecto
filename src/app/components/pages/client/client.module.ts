@@ -7,8 +7,7 @@ import {ClientComponent} from './client.component';
 import {ClientPageRoutingModule} from './client-routing.module';
 import {LayoutModule} from '../../shared/layout/layout.module';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
-import { ArmasComponent } from './armas/armas.component';
-import { ContactoComponent } from './contacto/contacto.component';
+
 
 
 

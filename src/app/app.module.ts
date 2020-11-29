@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
 registerLocaleData(localePy, 'es');
 registerLocaleData(en);
 
@@ -21,6 +22,7 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     NotFoundComponent,
+
   ],
   imports: [
     BrowserModule,

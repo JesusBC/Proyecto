@@ -8,6 +8,7 @@ import en from '@angular/common/locales/en';
 import { LayoutModule } from './layout/layout.module';
 import { ModalModule } from './modal/modal.module';
 
+
 registerLocaleData(en);
 
 @NgModule({
@@ -23,6 +24,7 @@ registerLocaleData(en);
     HttpClientModule,
     LayoutModule,
     ModalModule,
+
   ],
   providers: [],
 })

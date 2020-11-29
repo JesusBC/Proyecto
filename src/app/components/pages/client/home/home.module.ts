@@ -5,14 +5,20 @@ import { HomeComponent } from './home.component';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {LayoutModule} from '../../../shared/layout/layout.module';
+import {NzCalendarModule, NzCardModule, NzDividerModule, NzGridModule,} from "ng-zorro-antd";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    HomePageRoutingModule,
-    LayoutModule,
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        HomePageRoutingModule,
+        LayoutModule,
+        NzCardModule,
+        NzGridModule,
+        NzDividerModule,
+        NzCalendarModule,
+
+    ],
   declarations: [HomeComponent,],
   exports: []
 })

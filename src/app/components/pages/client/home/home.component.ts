@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  onValueChange(value: Date): void {
+    console.log(`Current value: ${value}`);
+  }
+
+  onPanelChange(change: { date: Date; mode: string }): void {
+    console.log(`Current value: ${change.date}`);
+    console.log(`Current mode: ${change.mode}`);
+  }
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+
 }
+
+
