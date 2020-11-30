@@ -13,7 +13,7 @@ export class EspecificacionesComponent implements OnInit {
 
   ngOnInit():void {
 
-
+    this.pos = JSON.parse(localStorage.getItem('pos'));
 
   }
 
