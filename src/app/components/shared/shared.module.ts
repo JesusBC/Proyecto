@@ -17,6 +17,7 @@ registerLocaleData(en);
   exports: [
     LayoutModule,
     ModalModule,
+
   ],
   imports: [
     CommonModule,

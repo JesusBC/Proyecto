@@ -12,10 +12,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('./components/pages/client/client.module').then(m => m.ClientPageModule),
       },
-      // {
-      //   path: 'admin',
-      //   loadChildren: () => import('./components/pages/admin/admin.module').then( m => m.AdminPageModule),
-      // },
+       {
+         path: 'admin',
+         loadChildren: () => import('./components/pages/admin/admin.module').then( m => m.AdminPageModule),
+       },
     ]
   },
   {

@@ -1,0 +1,45 @@
+
+<div class="nav-menu">
+
+  <button nz-button nzType="primary" (click)="getAll()">Consultar</button>
+  <button nz-button nzType="primary" (click)="showModalAgregar()">crear</button>
+  <button nz-button nzType="primary" (click)="showModalActualizar()">Actualizar</button>
+
+
+</div>
+
+<div class="row">
+  <div class="col">
+    <table>
+      <thead>
+      <tr>
+
+        <th> #</th>
+        <th>Nombre</th>
+        <th>Imagen</th>
+        <th>Precio</th>
+        <th>Tipo</th>
+        <th></th>
+        <th></th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let pp of prueba.tarjetaArmas">
+
+        <td>{{pp.nombre}}</td>
+        <td>{{pp.imagen}} </td>
+        <td>{{pp.precio}} </td>
+        <td>{{pp.tipo}} </td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+

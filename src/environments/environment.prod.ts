@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  API: 'https://www.api.clic2work.com/',
+  API: 'https://apisigo.ufpso.edu.co/',
+  URL: './assets'
 };

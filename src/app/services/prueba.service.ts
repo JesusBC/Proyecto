@@ -1,68 +1,14 @@
 import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {AuthService} from "./auth.service";
+import {Agregar} from "../models/agregar";
 
 @Injectable({
   providedIn: "root"
 })
 export class PruebaService{
 
-  tarjetaArmas = [
-    {
-
-      "nombre": "fusil traumatico aksa m-x5",
-      "imagen": "assets/image/mx-05.jpg",
-      "precio": "3000000"
-
-    },
-    {
-
-      "nombre": "fusil traumatico aksa m-x4",
-      "imagen": "/assets/image/mx-04.jpg",
-      "precio":  "3000000"
-    },
-    {
-
-      "nombre": "fusil traumatico aksa m-x1",
-      "imagen": "assets/image/mx-01.jpg",
-      "precio":  "3000000"
-    },
-    {
-
-      "nombre": "pistola traumatica issc m22-tr",
-      "imagen": "assets/image/01.jpg",
-      "precio":  "700000"
-    },
-    {
-
-      "nombre": "pistola blow tr 92d",
-      "imagen": "assets/image/1-26.jpg",
-      "precio":  "650000"
-    },
-    {
-
-      "nombre": "pistola ekol p29",
-      "imagen": "assets/image/9.jpg",
-      "precio":  "700000"
-    },
-    {
-
-      "nombre": "revolver majorviper 4.5",
-      "imagen": "assets/image/revolver.jpg",
-      "precio":  "650000"
-    },
-    {
-
-      "nombre": "revolver traumatico ekol viper 2.5",
-      "imagen": "assets/image/re1.jpg",
-      "precio":  "650000"
-    },
-    {
-
-      "nombre": "revolver traumatico zoraki 2.5",
-      "imagen": "assets/image/re_zoraki.jpg",
-      "precio": "700000"
-    },
-  ];
-
+  tarjetaArmas: any;
 
 
   tarjetaAccesorio = [
@@ -70,37 +16,74 @@ export class PruebaService{
 
       "nombre": "mira telescopica 4x20 para rifle",
       "imagen": "assets/image/mira.jpg",
-      "precio":  "120000"
+      "precio":  "120000",
+      "tipo": "accesorio"
     },
     {
 
       "nombre": "mira telescopica 6x32 bushnell",
       "imagen": "assets/image/mira1.jpg",
-      "precio":  "150000"
+      "precio":  "150000",
+      "tipo": "accesorio"
     },
     {
 
       "nombre": "chapuza externa revolver de cuero",
       "imagen": "assets/image/chapuza-.jpg",
-      "precio": "70000"
+      "precio": "70000",
+      "tipo": "accesorio"
     },
     {
 
       "nombre": "mira telescopica accurate",
       "imagen": "assets/image/mira-te.jpg",
-      "precio":  "200000"
+      "precio":  "200000",
+      "tipo": "accesorio"
     },
     {
 
       "nombre": "proveedor pistola m92",
       "imagen": "assets/image/proveedor.jpg",
-      "precio":  "115000"
+      "precio":  "115000",
+      "tipo": "accesorio"
     },
     {
 
       "nombre":" mira laser",
      "imagen": "assets/image/mira-laser.jpg",
-      "precio":  "83700"
+      "precio":  "83700",
+      "tipo": "accesorio"
     },
   ];
+
+  constructor(
+    private httpClient: HttpClient,
+    private authService: AuthService
+
+  ) { }
+
+  getAll(){
+    return this.httpClient.get(this.authService.API+'product/all',{headers: this.authService.headers});
+  }
+
+  create(agregar){
+    return this.httpClient.post(this.authService.API+'add/product', agregar, {headers: this.authService.headers});
+  }
+
+  update(update){
+    return this.httpClient.put(this.authService.API+'update/product', update, {headers: this.authService.headers} );
+  }
+
+  disable(){
+    return this.httpClient.put(this.authService.API+'disable/product',{'municipality_id': 14}, {headers: this.authService.headers} );
+  }
+
+  enable(){
+    return this.httpClient.put(this.authService.API+'enable/product',{'municipality_id': 14}, {headers: this.authService.headers} );
+  }
+
+  getOne(){
+    return this.httpClient.post(this.authService.API+'query/product',{'municipality_id': 14}, {headers: this.authService.headers} );
+  }
+
 }

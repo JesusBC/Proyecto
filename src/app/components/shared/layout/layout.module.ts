@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { LoadingComponent } from './loading/loading.component';
 import {FooterComponent} from "./footer/footer.component";
 import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {ModalModule} from "../modal/modal.module";
+import {LoginComponent} from "../modal/login/login.component";
 
 
 registerLocaleData(en);
@@ -19,11 +21,17 @@ registerLocaleData(en);
   declarations: [
     FooterComponent,
     HeaderComponent,
+    LoginComponent
+
+
     // LoadingComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
+    LoginComponent
+
+
 
   ],
   imports: [
@@ -32,7 +40,12 @@ registerLocaleData(en);
     HttpClientModule,
     RouterModule,
     NgZorroAntdModule,
+
+
+
+
   ],
   providers: [],
+  entryComponents: [LoginComponent],
 })
 export class LayoutModule { }

@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { ArmasComponent } from './armas.component';
 import { ArmasPageRoutingModule} from './armas-routing.module';
 import {LayoutModule} from '../../../shared/layout/layout.module';
-import {NgZorroAntdModule, NzGridModule} from "ng-zorro-antd";
+import {NgZorroAntdModule, NzGridModule, NzModalComponent} from "ng-zorro-antd";
+import {SharedModule} from "../../../shared/shared.module";
+
 
 
 
@@ -21,6 +23,8 @@ import {NgZorroAntdModule, NzGridModule} from "ng-zorro-antd";
     LayoutModule,
     NzGridModule,
     NgZorroAntdModule,
+    SharedModule,
+
   ],
   declarations: [ArmasComponent],
   exports: []

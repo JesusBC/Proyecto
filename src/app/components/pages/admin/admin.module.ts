@@ -7,6 +7,14 @@ import {AdminComponent} from './admin.component';
 
 import {LayoutModule} from '../../shared/layout/layout.module';
 import {AdminPageRoutingModule} from './admin-routing.module';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import {NgZorroAntdModule} from "ng-zorro-antd";
+import {AgregarComponent} from "../../shared/modal/agregar/agregar.component";
+import {ActualizarComponent} from "../../shared/modal/actualizar/actualizar.component";
+
+
+
+
 
 @NgModule({
   imports: [
@@ -14,8 +22,10 @@ import {AdminPageRoutingModule} from './admin-routing.module';
     FormsModule,
     AdminPageRoutingModule,
     LayoutModule,
+    NgZorroAntdModule,
   ],
-  declarations: [AdminComponent],
-  exports: []
+  declarations: [AdminComponent, MenuAdminComponent, AgregarComponent ,ActualizarComponent],
+  exports: [ AgregarComponent, ActualizarComponent],
+  entryComponents:[AgregarComponent, ActualizarComponent]
 })
 export class AdminPageModule {}

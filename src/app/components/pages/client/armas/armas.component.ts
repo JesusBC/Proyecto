@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PruebaService} from '../../../../services/prueba.service';
 import {EspecificacionesComponent} from "../../../shared/modal/especificaciones/especificaciones.component";
 import {NzModalService} from "ng-zorro-antd";
+import {LoginComponent} from "../../../shared/modal/login/login.component";
 
 
 @Component({
@@ -17,10 +18,14 @@ export class ArmasComponent implements OnInit {
     public modalService: NzModalService,
 
     ) { }
-
   ngOnInit(): void {
 
+
   }
+
+
+
+
   funcion(i){
     localStorage.setItem('pos', JSON.stringify(i));
     this.pos=i;
@@ -28,12 +33,16 @@ export class ArmasComponent implements OnInit {
   }
 
   showModalDescripcion(i){
+    console.log('llamando la funcion')
+
+
     const  modal = this.modalService.create({
       nzTitle: 'Descripcion',
       nzContent: EspecificacionesComponent,
       nzFooter: null,
     });
   }
+
 
 
 }

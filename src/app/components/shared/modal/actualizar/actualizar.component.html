@@ -1,0 +1,37 @@
+<p>actualizar works!</p>
+
+<form nz-form #actualizarProducto="ngForm">
+  <nz-form-item>
+    <nz-form-label nzRequired>id_producto</nz-form-label>
+    <input nz-input placeholder="id_producto" [(ngModel)]="update.product_id "  #nombrep="ngModel" name="nombrep" required=""/>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzRequired>Nobre del Proyecto</nz-form-label>
+    <input nz-input placeholder="Nombre del Proyecto" [(ngModel)]="update.nombre_proyecto "  #nombrep="ngModel" name="nombrep" required=""/>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzRequired>Titulo del Producto</nz-form-label>
+    <input nz-input placeholder="Titulo del Producto" [(ngModel)]="update.titulo" #titulo="ngModel" name="titulo" required="" />
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzRequired>Precio del Producto</nz-form-label>
+    <input nz-input placeholder="Precio del Producto" [(ngModel)]="update.precio" #precio="ngModel" name="precio" required="" />
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzRequired>Imagen</nz-form-label>
+    <input nz-input placeholder="Ruta de la Imagen, ejemplo: /assets/popular_phones/RN9P.jpg" [(ngModel)]="update.imagen" #imagen="ngModel" name="imagen" required="" />
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzRequired>Descripcion del Producto</nz-form-label>
+    <textarea class="textArea" nz-input placeholder="Descripcion del Producto" [(ngModel)]="update.descripcion" #descripcion="ngModel" name="descripcion" required=""></textarea>
+  </nz-form-item>
+  <nz-row nzJustify="space-around">
+    <nz-col>
+      <button nz-button [nzType]="'primary'" (click)="enviarDatos()" [disabled]="!actualizarProducto.form.valid" [class.active]="actualizarProducto.form.valid" [class.disabled]="!actualizarProducto.form.valid"><span>Guardar</span></button>
+    </nz-col>
+    <nz-col>
+      <button nz-button [nzType]="'primary'" (click)="cancelar()" ><span>Cancelar</span></button>
+    </nz-col>
+  </nz-row>
+</form>

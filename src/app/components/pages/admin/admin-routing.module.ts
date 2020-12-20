@@ -11,8 +11,13 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
-      }
+        loadChildren: () => import('../admin/home/home.module').then(m => m.HomePageModule),
+      },
+      {
+        path: 'catalogo',
+        loadChildren: () => import('../admin/catalogo/catalogo.module').then(m => m.CatalogoPageModule),
+      },
+
     ],
   }
 ];

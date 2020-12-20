@@ -1,0 +1,12 @@
+<nz-row >
+  <nz-card [nzCover]="coverTemplate"   >
+    <nz-card-meta nzTitle="{{prueba.tarjetaAccesorio[pos].nombre | titlecase}}"
+                  nzDescription="{{prueba.tarjetaAccesorio[pos].precio}}"></nz-card-meta>
+  </nz-card>
+  <ng-template #coverTemplate>
+    <img src="{{prueba.tarjetaAccesorio[pos].imagen}}"/>
+  </ng-template>
+
+
+
+</nz-row>
